@@ -1,3 +1,4 @@
+//función constructora
 function Persona(nombre, dni, clave, cuenta) {
     this.nombre = nombre;
     this.dni = dni;
@@ -5,19 +6,20 @@ function Persona(nombre, dni, clave, cuenta) {
     this.cuenta = cuenta;
 }
 
-//3 objetos con los que se podrá ingresar al menú
-var persona1 = new Persona("Manuel González", "1254623", 1234, 200000);
-var persona2 = new Persona("Tamara Salazar", "1597863", 7539, 1000);
-var persona3 = new Persona("Patricia Torres", "1257896", 7415, 1000500);
+//Usuario podrá ingresar al menú
+var persona1 = new Persona("Alan Brito", "123456", 1234, 200000);
+var persona2 = new Persona("María Juana", "aaaaaa", 5678, 1000);
+var persona3 = new Persona("Pedro Machuca", "zzzzzz", 9009, 1000500);
+var persona4 = new Persona("Elisa Paio", "iiiiii", 1412, 10500);
 
 //lista de objetos
-var miLista = [persona1, persona2, persona3];
+var miLista = [persona1, persona2, persona3, persona4];
 
 alert("Bienvenido a Banca en Línea");
 var dni = prompt("Ingrese su identificador");
 var clave = parseInt(prompt("Ingrese su clave"));
 
-alert("procesando...")
+alert("Procesando...")
 
 var boolean = false;
 for (let i = 0; i < miLista.length; i++) {
@@ -29,7 +31,8 @@ for (let i = 0; i < miLista.length; i++) {
 
     if (boolean == true) {
         alert("Bienvenido " + miLista[i].nombre);
-        menu(miLista[i]);
+        // Aquí puedes llamar a tu función `menu(miLista[i]);`
+        break;
     }
 
 }
@@ -38,10 +41,10 @@ if (boolean == false) {
     alert("usuario incorrecto");
 }
 
-
+//MENU
 function menu(usuario) {
     do {
-        var opcion = parseInt(prompt("Seleccione que desea hacer: \n 1.- Ver saldo \n 2.- Realizar giro \n 3.- Realizar depósito \n 4.- Salir"));
+        var opcion = parseInt(prompt("Elige tu opción: \n 1.- Ver saldo \n 2.- Realizar giro \n 3.- Depositar \n 4.- Salir"));
 
         switch (opcion) {
             case 1:
