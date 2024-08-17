@@ -65,6 +65,7 @@ function menu(usuario) {
                 }
 
                 break;
+
             case 3:
                 var deposito = parseInt(prompt("Su saldo actual es: " + usuario.cuenta + " \nIngrese el monto que desea depositar"));
 
@@ -72,23 +73,20 @@ function menu(usuario) {
                 usuario.cuenta = usuario.cuenta + deposito;
 
                 alert("Deposito realizado. Su nuevo saldo es " + usuario.cuenta);
-
-
-
                 break;
+
             case 4:
                 alert("Gracias por preferirnos");
                 exits();
-
                 break;
 
             default:
-
                 alert("Selección erronea")
                 break;
         }
 
     } while (opcion != 4);
+
 }
 
 
